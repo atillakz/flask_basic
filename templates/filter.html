@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Working with filters </h1>
+
+
+{% for movie, duration in movies|dictsort(false, 'value') %}
+
+<ul>
+
+
+    <li> {{ movie|title}} : {{ duration|round(1) }}  </li>
+
+</ul>
+
+
+{% endfor %}
+
+<hr>
+</body>
+</html>
